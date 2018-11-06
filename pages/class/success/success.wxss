@@ -1,0 +1,16 @@
+.form_button_set{
+  height: 88rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 28rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+}
+.form_button{
+  width:690rpx;
+  height: 88rpx;
+  background-color: #1AAD19;
+  color: #fff;
+}

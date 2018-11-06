@@ -1,0 +1,19 @@
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+  
+<!--首页-->  
+<view hidden="{{currentTab!==0}}">  
+  <view class='list' style='height: 1050rpx;' >
+        <view style='text-align: center;width:100%;line-height: 1050rpx;color: #ccc;'>Coming soon...</view>
+  </view>  
+</view>  
+  
+<!--搜索-->  
+<view hidden="{{currentTab!==1}}" >  
+  <view class='list' style='height: 1050rpx;' >
+        <view style='text-align: center;width:100%;line-height: 1050rpx;color: #ccc;'>Coming soon...</view>
+  </view>  
+</view>  
+  

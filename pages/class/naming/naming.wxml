@@ -1,0 +1,64 @@
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view> 
+
+<view hidden="{{currentTab!==0}}">  
+  <!-- 随机点名 -->
+      <view class='top'>
+      <text class='item_left'>随机学生</text>
+      <!-- <text class='item_left'>搜索</text>       -->
+      </view>
+
+      <view class='list' wx:if="{{students.length}}" >
+
+      <view class='block_left'>
+        <text style='color:white;'>头像</text>
+      </view>
+
+      <view class='info' >
+      <view class='info_list1' style='color:#000;'>{{randomStudent.studentName}}</view>
+      <view class='info_list2'>{{Sex[randomStudent.studentSex]}}</view>
+      <view class='info_list3'>学号：{{randomStudent.studentNum}}</view>
+      </view>
+       <navigator url='../judge/judge?studentId={{randomStudent.objectId}}' class='naming'>点名</navigator>
+
+      </view>
+
+      <view class='list' wx:if="{{!students.length}}"  >
+        <view style='text-align: center;width:100%;line-height: 150rpx;color: #ccc;'>暂无学生，请添加</view>
+      </view> 
+
+      <view class="form_button_set">
+          <button bindtap='changeStudent'  class="form_button" style='background-color:skyblue;'>换一个</button>
+      </view> 
+      
+</view> 
+
+    
+<view hidden="{{currentTab!==1}}">  
+  <!-- 抽查点名 -->
+      <view class='top'>
+      <text class='item_left'>所有学生</text>
+      <!-- <text class='item_left'>搜索</text> -->
+      </view>
+      <view class='list' wx:if="{{students.length}}" wx:for="{{students}}" wx:key="{{item.objectId}}">
+      <view class='block_left'>
+        <text style='color:white;'>头像</text>
+      </view>
+      <view class='info'>
+      <view class='info_list1' style='color:#000;'>{{item.studentName}}</view>
+      <view class='info_list2'>{{Sex[item.studentSex]}}</view>
+      <view class='info_list3'>学号：{{item.studentNum}}</view>
+      </view>
+       <!-- <button class='naming'>点名</button> -->
+       <navigator url='../judge/judge?studentId={{item.objectId}}' class='naming'>点名</navigator>
+      </view>
+
+      <view class='list' wx:if="{{!students.length}}"  >
+        <view style='text-align: center;width:100%;line-height: 150rpx;color: #ccc;'>暂无学生，请添加</view>
+      </view>
+      
+</view>  
+
+   

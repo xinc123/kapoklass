@@ -1,0 +1,44 @@
+  <view class='top'>
+      <text class='item_left'>消息通知</text>
+  </view>
+
+<form bindsubmit="NoticeformSubmit" bindreset="formReset">    
+  <view>
+
+  <view class="form_list">
+    <view class='form_list_left'>通知标题</view>
+    <input name="Title" value='{{notices.title}}' class='form_list_right'  placeholder="请输入通知标题" />
+  </view>
+
+  <view class="form_list">
+    <view class='form_list_left'>优先级</view>
+    <input name="Level" value='{{notices.level}}'  class='form_list_right' type='number' placeholder="数字越大优先级越高" />
+  </view>
+
+  <view class="form_list">
+    <view class='form_list_left'>通知类别</view>
+    <picker name="Kind" bindchange="bindKindChange" value="{{accountIndex}}" range="{{kind}}" >
+       <view class="form_select" style='width:170rpx;'>{{kind[accountIndex]}}<span class='form_select_down'>V</span></view> 
+    </picker>
+  </view>
+
+  <view class="form_list">
+    <view class='form_list_left'>截至时间</view>
+    <picker name="Deadline" mode="date" value="{{date}}" start="1-01-01" end="10000-12-31" bindchange="bindDateChange">
+    <view class="form_select" style='width:220rpx;'>{{date}}<span class='form_select_down'>V</span></view>
+    </picker>
+  </view>
+  
+  <view class="form_title">通知详情</view> 
+  <textarea name="Content" value='{{notices.content}}' maxlength='12345'  class="weui-textarea" placeholder="请输入文本" style="font-size:30rpx;background-color: white;height: 300rpx;border: 2rpx solid #ccc;" />
+
+  <view class="form_button_set">
+    <button formType="submit" class="form_button"  >提交修改</button>
+  </view>
+  
+</view>  
+</form>
+
+<view class="form_button_set" style='margin-top:0rpx;'>
+    <button bindtap='deleteNotice'  class="form_button" style='background-color: #e00;' >删除通知</button>
+</view> 

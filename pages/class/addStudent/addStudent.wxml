@@ -1,0 +1,26 @@
+<view class="form_title">添加学生</view> 
+
+<form bindsubmit="LessonformSubmit" bindreset="LessonformReset">  
+
+<view class="form_list" style="padding-right: 0rpx;">
+    <!-- <view class='form_list_left' style="width: 360rpx;"  >学生信息（共n人）</view> -->
+    <view class='form_list_left' style="width: 360rpx;"  >学生信息</view>
+    <button bindtap="addToFront" class='form_list_right' style="background-color: white;font-size: 40rpx;width: 88rpx;height: 88rpx;">+</button>
+</view>
+
+  <view class="form_list" style="padding-right: 0rpx;" wx:for="{{objectArray}}" wx:key="unique">
+    <!-- 可以用data-index="{{item.content}}"将数据绑定在view里面，然后在js中用e.currentTarget.dataset.index取出 -->
+    <picker bindchange="bindSexChange" value="{{item.accountIndex}}" range="{{accounts}}" data-index="{{item.id}}">
+       <view class="form_select" sytle="width:70rpx">{{accounts[item.accountIndex]}} <span class='form_select_down'>V</span></view> 
+    </picker>
+    <input bindinput="bindNameChange" data-index="{{item.id}}" class='form_select_right1' placeholder="姓名" />
+     <!-- <view class='form_select_right2'>至</view>  -->
+    <input bindinput="bindNumChange" type='number' data-index="{{item.id}}" class='form_select_right1'style="border-right:0px;" placeholder="学号" />
+    <!-- <view class='form_select_right2'>节</view>     -->
+  </view>
+    
+  <view class="form_button_set">
+    <button formType="submit"  class="form_button" >提交</button>
+  </view>
+
+  </form>  

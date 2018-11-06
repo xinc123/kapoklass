@@ -1,0 +1,78 @@
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+
+<view hidden="{{currentTab!==0}}">  
+  <!-- 班级 -->
+      <view class='top'>
+      <!-- <text class='item_left'>{{return_class}}（50人）</text> -->
+      <text class='item_left'>{{return_class}}({{return_lessonName}})</text>
+      <navigator url='../addStudent/addStudent?lessonId={{currentLesson_id}}' class='item_right' hover-class='navigator-hover'>添加学生> 
+      </navigator>
+      </view>
+      
+      <!-- <view class='top'>
+      <text class='item_left'>搜索</text>
+      </view> -->
+
+      <!-- 成员 -->
+      <view class='list' wx:if="{{students.length}}" wx:for="{{students}}" wx:key="{{item.objectId}}">
+      <navigator url='../student/student?studentId={{item.objectId}}' class='list' hover-class='navigator-hover'>
+      <view class='block_left' style='color:white;'>
+        <text>头像</text>
+      </view>
+      <view class='info' >
+      <view class='info_list1' style='color:#000;'>{{item.studentName}}</view>
+      <view class='info_list2'>{{Sex[item.studentSex]}}</view>
+      <view class='info_list3'>学号：{{item.studentNum}}</view>
+      </view>
+      </navigator>      
+      </view>  
+
+      <view class='list' wx:if="{{!students.length}}"  >
+         <view style='text-align: center;width:100%;line-height: 150rpx;color: #ccc;'>暂无学生，可点击右上角添加</view> 
+      </view>
+
+</view>  
+
+<view hidden="{{currentTab!==1}}">  
+  <!-- 功能 -->
+      <navigator url='../naming/naming?lessonId={{currentLesson_id}}' class='skill'  >
+      <image class="skill_icon"   src='../../../images/find.png'></image>
+      <view style='line-height:100rpx;'>点名</view>
+      <view class='skill_right'>></view>      
+      </navigator> 
+        <navigator url='' class='skill'  >
+      <image class="skill_icon"   src='../../../images/find.png'></image>
+      <view style='line-height:100rpx;' style='color:grey;'>教学进度(Coming soon...)</view>
+      <view class='skill_right'>></view>      
+      </navigator>
+      <navigator url='' class='skill'  >
+      <image class="skill_icon"   src='../../../images/find.png'></image>
+      <view style='line-height:100rpx;' style='color:grey;'>作业记录(Coming soon...)</view>
+      <view class='skill_right'>></view>      
+      </navigator> 
+      <navigator url='' class='skill'  >
+      <image class="skill_icon"   src='../../../images/find.png'></image>
+      <view style='line-height:100rpx;' style='color:grey;'>成绩管理(Coming soon...)</view>
+      <view class='skill_right'>></view>      
+      </navigator> 
+       <!-- <navigator url='../lesson/lesson' class='skill'  >
+      <image class="skill_icon"   src='../../../images/find.png'></image>
+      <view style='line-height:100rpx;'>修改课程信息(Coming soon...)</view>
+      <view class='skill_right'>></view>      
+      </navigator>    -->
+
+      <view class="form_button_set">
+          <button bindtap='deleteLesson' class="form_button" style='background-color: #e00;' >删除课程</button>
+      </view>
+
+</view> 
+
+  <!-- 资源 -->
+<!-- <view hidden="{{currentTab!==2}}">  
+  <view>资源</view>  
+</view>  -->
+
+    

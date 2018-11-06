@@ -1,0 +1,91 @@
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+  
+ 
+
+<!--课程动态-->  
+<view hidden="{{currentTab!==0}}">  
+  <view>
+
+      <!-- 今日课程 -->
+      <view class='top'>
+      <text class='item_left'>今日课程</text>
+      <!-- <navigator url='../classTable/classTable' class='item_right' hover-class='navigator-hover'>完整课表> 
+      </navigator> -->
+      </view>
+
+      <!-- 课程item -->
+      <view class='list' wx:if="{{lessonTimes.length}}" wx:for="{{lessonTimes}}" wx:key="{{item.id}}">
+      <navigator url='../lesson/lesson?lessonId={{item.ownLesson.objectId}}' class='list' hover-class='navigator-hover'>
+      <view class='block_left'>{{item.begin}}-{{item.end}}</view>
+      <view class='info'>
+       <view class='info_list1'>{{item.ownLesson.lessonName}}</view>       
+      <view class='info_list2'>{{item.ownLesson.class}}</view>
+      <view class='info_list3'>{{item.ownLesson.address}}</view>
+      </view>
+      </navigator>      
+      <navigator url='../naming/naming?lessonId={{item.ownLesson.objectId}}' class='naming'  >点名</navigator>
+      </view>
+
+      <view class='list' wx:if="{{!lessonTimes.length}}"  >
+        <view style='text-align: center;width:100%;line-height: 150rpx;color: #ccc;'>暂无今日课程，可点击右下角添加</view>
+      </view>
+
+      <!-- 消息通知 -->
+      <view class='top'>
+      <text class='item_left'>消息通知</text>
+      <!-- <text class='item_left'>消息通知</text>       -->
+      <view wx:if="{{sortCondition}}" class='item_right' bindtap='sortChange'>{{sort[0]}}V</view>
+      <view wx:if="{{!sortCondition}}" class='item_right' bindtap='sortChange'>{{sort[1]}}V</view>      
+      </view>
+      <!-- 消息item -->
+      <view class='list' wx:if="{{notices.length}}" wx:for="{{notices}}" wx:key="{{item.objectId}}">
+      <navigator url='../notice/notice?id={{item.objectId}}' class='list' hover-class='navigator-hover'>
+      <view class='block_left' style='background-color:pink' >{{item.level}}级</view>
+      <view class='info'>
+      <view class='info_list1'>{{item.title}}</view>
+        <view class='info_list2'>{{kind[item.kind]}}</view>  
+      <view class='info_list3'>截至时间：{{item.deadline}}</view>
+      </view>
+      </navigator>
+      </view>
+
+      <view class='list' wx:if="{{!notices.length}}"  >
+        <view style='text-align: center;width:100%;line-height: 150rpx;color: #ccc;'>暂无消息通知，可点击右下角添加</view>
+      </view>
+
+
+    </view>   
+</view>  
+  
+<!--所有课程-->  
+<view hidden="{{currentTab!==1}}">
+<view class='top'>
+      <text class='item_left'>总数：{{total_lesson}}</text>
+</view>
+
+  <view class='list' wx:if="{{lessonDatas.length}}" wx:for="{{lessonDatas}}" wx:key="{{item.id}}">  
+  <navigator url='../lesson/lesson?lessonId={{item.objectId}}' class='list' hover-class='navigator-hover'>
+      <view class='list'>
+       <view class='block_left' style='color:white;'>图片</view>
+       <!-- <view class='block_left'>1-4</view>          -->
+      <view class='info'>
+      <view class='info_list1'>{{item.lessonName}}</view>
+      <view class='info_list2'>{{item.class}}</view>
+      <view class='info_list3'>{{item.address}}</view>
+      </view>
+      </view>
+  </navigator>
+  </view>
+  
+  <view class='list' wx:if="{{!lessonDatas.length}}"  >
+    <view style='text-align: center;width:100%;line-height: 150rpx;color: #ccc;'>暂无课程数据，可点击右下角添加</view>
+  </view>  
+
+</view>
+
+ 
+
+<navigator url='../addClass/addClass' class="add">+</navigator>

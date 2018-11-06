@@ -1,0 +1,62 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.93",
+	"appid": "wxa0d09361290cc6e9",
+	"projectname": "kapolass",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "添加课程",
+					"pathName": "pages/class/addClass/addClass",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课表",
+					"pathName": "pages/class/classTable/classTable",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/class/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课程lesson",
+					"pathName": "pages/class/lesson/lesson",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,109 @@
+/*调用WeUI*/
+@import 'style/weui.wxss';
+/*页面初始样式*/
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;
+  background: #eee;  
+}
+
+/*顶部导航*/  
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+}
+/*被选中item的字体颜色*/  
+.navbar .item.active{  
+  color: #da7c0c;  
+}
+/*被选中item的底部样式*/  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 4rpx;  
+  background: #da7c0c;  
+}
+
+/*统一hover格式*/
+.navigator-hover{
+  color: grey;
+}
+
+/* 条形list的顶部 */
+.top{
+  background-color: white;
+  border-bottom: 2rpx solid #eee;
+  margin-top:24rpx;
+  height: 60rpx;
+}
+.item_left{
+  float:left;
+  font-size:40rpx; 
+  line-height: 60rpx; 
+  color: #da7c0c; 
+}
+.item_right{
+  float:right;
+  font-size:24rpx; 
+  line-height: 60rpx; 
+  color: #aaa;
+}
+
+/*条形list显示数据 */
+.list{
+  background-color: white;
+  border-bottom: 2rpx solid #eee;
+  height: 150rpx;
+  display: flex;
+}
+/*左边的方块*/
+.block_left{
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  background-color: skyblue;
+  border-radius: 25rpx;
+  margin: 16rpx;
+  line-height: 120rpx;
+  text-align: center;
+}
+/*右边展示数据*/
+.info{
+  height: 150rpx;
+  width: 500rpx;
+  margin-left: 15rpx;
+  display: inline-block;
+  position: relative;
+}
+.info_list1{
+  font-size: 30rpx;
+  position: absolute;
+  left: 0;
+  top:15rpx;
+}
+.info_list2{
+  font-size: 24rpx;
+  color: #ccc;
+  position: absolute;
+  left: 0;
+  top:65rpx;
+}
+.info_list3{
+  font-size: 24rpx;
+  color: #ccc;
+  position: absolute;
+  left: 0;
+  top:100rpx;
+}

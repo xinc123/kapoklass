@@ -1,0 +1,88 @@
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+  
+<!--添加课程-->
+<form bindsubmit="LessonformSubmit" bindreset="LessonformReset">  
+<view hidden="{{currentTab!==0}}">  
+<view>
+   <view class="form_title">课程信息</view> 
+
+  <view class="form_list">
+    <view class='form_list_left'>课程名称</view>
+    <input name="LessonName" class='form_list_right' placeholder="请输入课程名称"  />
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>班级</view>
+    <input name="Class" class='form_list_right' placeholder="请输入班级" />
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>地点</view>
+    <input name="Address" class='form_list_right' placeholder="请输入地点" />
+  </view>
+
+  <view class="form_list" style="padding-right: 0rpx;">
+    <view class='form_list_left' >上课时间</view>
+    <button bindtap="addToFront" class='form_list_right' style="background-color: white;font-size: 40rpx;width: 88rpx;height: 88rpx;">+</button>
+  </view>
+
+  <view class="form_list" wx:for="{{objectArray}}" wx:key="unique">
+    <!-- 可以用data-index="{{item.content}}"将数据绑定在view里面，然后在js中用e.currentTarget.dataset.index取出 -->
+    <picker bindchange="bindDayChange" value="{{item.accountIndex}}" range="{{accounts}}" data-index="{{item.id}}">
+       <view class="form_select">{{accounts[item.accountIndex]}} <span class='form_select_down'>V</span></view> 
+    </picker>
+    <input type='number' bindinput="bindBeginChange" data-index="{{item.id}}" class='form_select_right1' placeholder="第几节开始" />
+    <view class='form_select_right2'>至</view>
+    <input type='number' bindinput="bindEndChange" data-index="{{item.id}}" class='form_select_right1' placeholder="第几节结束" />
+    <view class='form_select_right2'>节</view>    
+  </view>
+    
+  <view class="form_button_set">
+    <button formType="submit"  class="form_button" style='background-color: pink;' >提交</button>
+  </view>
+  
+</view>  
+</view>
+</form>  
+  
+<!--添加通知-->
+<form bindsubmit="NoticeformSubmit" bindreset="formReset">    
+<view hidden="{{currentTab!==1}}">  
+  <view>
+   <view class="form_title">通知信息</view> 
+
+  <view class="form_list">
+    <view class='form_list_left'>通知标题</view>
+    <input name="Title" class='form_list_right' placeholder="请输入通知标题" />
+  </view>
+
+  <view class="form_list">
+    <view class='form_list_left'>优先级</view>
+    <input name="Level" class='form_list_right' type='number' placeholder="数字越大优先级越高" />
+  </view>
+
+  <view class="form_list">
+    <view class='form_list_left'>通知类别</view>
+    <picker name="Kind" bindchange="bindKindChange" value="{{accountIndex}}" range="{{kind}}" >
+       <view class="form_select" style='width:170rpx;'>{{kind[accountIndex]}}<span class='form_select_down'>V</span></view> 
+    </picker>
+  </view>
+
+  <view class="form_list">
+    <view class='form_list_left'>截至时间</view>
+    <picker name="Deadline" mode="date" value="{{date}}" start="1-01-01" end="10000-12-31" bindchange="bindDateChange">
+    <view class="form_select" style='width:220rpx;'>{{date}}<span class='form_select_down'>V</span></view>
+    </picker>
+  </view>
+  
+  <view class="form_title">通知详情</view> 
+  <textarea name="Content" class="weui-textarea" placeholder="请输入文本" style="font-size:30rpx;background-color: white;height: 300rpx;border: 2rpx solid #ccc; " />
+
+  <view class="form_button_set">
+    <button formType="submit" class="form_button" style='background-color: pink;' >提交</button>
+  </view>
+  
+</view>  
+</view>  
+</form>

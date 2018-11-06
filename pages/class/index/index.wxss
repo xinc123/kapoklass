@@ -1,0 +1,28 @@
+/*添加（圆形按钮的样式）*/
+.add{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  border-radius:50%;
+  background-color: pink;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  color: #aaa;
+}
+
+.naming{
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  border-radius: 20rpx;
+  position:absolute;
+  right: 30rpx;
+  margin-top: 35rpx;
+  margin-bottom: 35rpx;
+  background-color: skyblue;
+}

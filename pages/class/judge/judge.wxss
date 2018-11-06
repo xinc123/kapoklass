@@ -1,0 +1,67 @@
+
+.form_title{
+  height: 88rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #ccc; 
+  font-size: 28rpx;  
+  color: #999;   
+  
+  line-height: 88rpx;  
+}
+.form_list{
+  background-color: white;
+  height: 88rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #ccc; 
+  font-size: 28rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+}
+.form_list_left{
+  float: left; 
+  width: 210rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  color: black;
+}
+.form_list_right{
+  float: right; 
+  width: 480rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  color: black;
+}
+.form_judge_right1{
+  font-size:34rpx;
+  width:410rpx;
+  height:88rpx;
+  display:inline-block;
+  margin: 0;
+}
+.form_judge_right2{
+  width:100rpx;
+  padding:0rpx;
+  display: inline-block;
+}
+
+.form_button_set{
+  height: 88rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 28rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+  
+}
+.form_button{
+  width:690rpx;
+  height: 88rpx;
+  background-color: #1AAD19;
+  color: #fff;
+}

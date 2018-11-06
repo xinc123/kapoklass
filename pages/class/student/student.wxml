@@ -1,0 +1,54 @@
+
+  
+<view>
+   <view class="form_title">学生信息</view> 
+
+  <view class="form_list">
+    <view class='form_list_left'>学生姓名</view>
+    <view class='form_list_right'>{{student.studentName}}</view> 
+    <!-- <input class='form_list_right' value="{{student.studentName}}"  /> -->
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>性别</view>
+    <view class='form_list_right'>{{Sex[student.studentSex]}}</view> 
+    <!-- <input class='form_list_right' value="{{Sex[student.studentSex]}}" /> -->
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>学号</view>
+    <view class='form_list_right'>{{student.studentNum}}</view> 
+    <!-- <input class='form_list_right' value="{{student.studentNum}}" /> -->
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>S评分次数</view>
+    <view class='form_list_right'>{{student.Spoint}}</view> 
+    <!-- <input class='form_list_right' value="{{student.Spoint}}" placeholder='0' /> -->
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>A评分次数</view>
+    <view class='form_list_right'>{{student.Apoint}}</view>     
+    <!-- <input class='form_list_right' value="{{student.Apoint}}" placeholder='0'/> -->
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>B评分次数</view>
+    <view class='form_list_right'>{{student.Bpoint}}</view>     
+    <!-- <input class='form_list_right' value="{{student.Bpoint}}" placeholder='0'/> -->
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>C评分次数</view>
+    <view class='form_list_right'>{{student.Cpoint}}</view>     
+    <!-- <input class='form_list_right' value="{{student.Cpoint}}" placeholder='0'/> -->
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>D评分次数</view>
+    <view class='form_list_right'>{{student.Dpoint}}</view>     
+    <!-- <input class='form_list_right' value="{{student.Dpoint}}" placeholder='0'/> -->
+  </view>
+
+  
+    
+  <view class="form_button_set">
+    <button bindtap='deleteStudent' class="form_button" style='background-color: #e00;' >删除学生</button>
+  </view> 
+  
+</view>  
+  

@@ -1,0 +1,41 @@
+/*颜色个性化*/
+.navbar .item.active{  
+  color: skyblue;  
+}  
+.navbar .item.active:after{  
+  background: skyblue;  
+}  
+.item_left{
+  color: skyblue; 
+}
+
+/*点名按钮*/
+.naming{
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  border-radius: 20rpx;
+  position:absolute;
+  right: 30rpx;
+  margin-top: 35rpx;
+  margin-bottom: 35rpx;
+  background-color: skyblue;
+}
+
+.form_button_set{
+  height: 88rpx;
+  margin-top: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 28rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+}
+.form_button{
+  width:690rpx;
+  height: 88rpx;
+  background-color: #1AAD19;
+  color: #fff;
+}

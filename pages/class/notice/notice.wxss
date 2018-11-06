@@ -1,0 +1,93 @@
+/*颜色个性化*/
+.navbar .item.active{  
+  color: pink;  
+}  
+.navbar .item.active:after{  
+  background: pink;  
+}
+
+.form_title{
+  height: 88rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #ccc; 
+  font-size: 30rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+}
+.form_list{
+  background-color: white;
+  height: 88rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #ccc; 
+  font-size: 30rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+}
+.form_list_left{
+  float: left; 
+  width: 210rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: black;
+}
+.form_list_right{
+  float: right; 
+  width: 480rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: black;
+}
+.form_select{
+  float: left; 
+  width: 120rpx;
+  height: 88rpx;
+  border-right:2rpx solid #ccc; 
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: black;
+}
+.form_select_down{
+  float: right;
+  line-height:88rpx;
+  color:#aaa;
+  font-size: 30rpx;
+}
+.form_select_right1{
+  float: left;
+  width: 200rpx;
+  height: 88rpx;
+  line-height:88rpx;
+  color:black;
+  font-size: 30rpx;
+  text-align: center;
+}
+.form_select_right2{
+  float: left;
+  width: 80rpx;
+  height: 88rpx;
+  line-height:88rpx;
+  color:black;
+  font-size: 30rpx;
+  text-align: center;
+}
+.form_button_set{
+  height: 88rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 28rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+  
+}
+.form_button{
+  width:690rpx;
+  height: 88rpx;
+  background-color: #1AAD19;
+  color: #fff;
+}

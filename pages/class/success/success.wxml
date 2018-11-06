@@ -1,0 +1,4 @@
+<view>操作成功！</view>
+<view class="form_button_set">
+    <button bindtap='return_index'  class="form_button" >回到首页</button>
+</view>

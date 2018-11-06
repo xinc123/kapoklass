@@ -1,0 +1,52 @@
+/*颜色个性化*/
+.navbar .item.active{  
+  color: skyblue;  
+}  
+.navbar .item.active:after{   
+  background: skyblue;  
+}  
+.item_left{
+  color: skyblue; 
+}
+
+
+
+/*功能板块的样式*/
+.skill{
+  background-color: white;
+  border-bottom: 2rpx solid #eee;
+  height: 100rpx;
+  display: flex;
+}
+.skill_icon{
+  width: 80rpx;
+  height: 80rpx; 
+  margin-top:10rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}
+.skill_right{
+  line-height:100rpx;
+  color:#aaa;
+  font-size: 40rpx;
+  position:absolute;
+  right: 30rpx;
+}
+
+.form_button_set{
+  height: 88rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 28rpx;  
+  color: #999;   
+  line-height: 88rpx;  
+  
+}
+.form_button{
+  width:690rpx;
+  height: 88rpx;
+  background-color: #1AAD19;
+  color: #fff;
+}

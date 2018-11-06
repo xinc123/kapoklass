@@ -1,0 +1,51 @@
+<form bindsubmit="JudgeformSubmit" bindreset="LessonformReset"> 
+  
+<view>
+   <view class="form_title">学生信息</view> 
+
+  <view class="form_list">
+    <view class='form_list_left'>学生姓名</view>
+    <view class='form_list_right'>{{student.studentName}}</view>    
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>性别</view>
+    <view class='form_list_right'>{{Sex[student.studentSex]}}</view> 
+  </view>
+  <view class="form_list">
+    <view class='form_list_left'>学号</view>
+    <view class='form_list_right'>{{student.studentNum}}</view>     
+  </view>
+  <view class="form_list" style="padding-right:0rpx;">
+    <view class='form_list_left'>S评分次数</view>
+    <input class='form_judge_right1' name="Spoint_change" value="{{Spoint_judge}}"/>
+    <button bindtap="addS" class='form_judge_right2'>+</button>
+  </view>
+  <view class="form_list" style="padding-right:0rpx;">
+    <view class='form_list_left'>A评分次数</view>
+    <input class='form_judge_right1' name="Apoint_change"  value="{{Apoint_judge}}" />
+    <button bindtap="addA" class='form_judge_right2'>+</button>
+  </view>
+  <view class="form_list" style="padding-right:0rpx;">
+    <view class='form_list_left'>B评分次数</view>
+    <input class='form_judge_right1' name="Bpoint_change"  value="{{Bpoint_judge}}" />
+    <button bindtap="addB" class='form_judge_right2'>+</button>
+  </view>
+  <view class="form_list" style="padding-right:0rpx;">
+    <view class='form_list_left'>C评分次数</view>
+    <input class='form_judge_right1' name="Cpoint_change"  value="{{Cpoint_judge}}" />
+    <button bindtap="addC" class='form_judge_right2'>+</button>
+  </view>
+  <view class="form_list" style="padding-right:0rpx;">
+    <view class='form_list_left'>D评分次数</view>
+    <input class='form_judge_right1' name="Dpoint_change" value="{{Dpoint_judge}}" />
+    <button bindtap="addD" class='form_judge_right2'>+</button>
+  </view>
+  
+    
+  <view class="form_button_set">
+    <button formType="submit"  class="form_button"style='background-color:skyblue;'>提交评价</button>
+  </view>
+  
+</view>  
+  
+</form>  
